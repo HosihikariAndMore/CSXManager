@@ -1,4 +1,6 @@
-﻿namespace PluginMain
+﻿using System.Reflection;
+
+namespace PluginMain
 {
     public static class Plugin
     {
