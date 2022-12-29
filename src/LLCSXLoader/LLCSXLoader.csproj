@@ -9,11 +9,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Costura.Fody" Version="5.7.0">
-		  <PrivateAssets>all</PrivateAssets>
-		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive;compile;</IncludeAssets>
-		</PackageReference>
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.4.0"/>
+	  <PackageReference Include="Dotnet.Script.Core" Version="1.4.0" />
+	  <PackageReference Include="ReadLine" Version="2.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
