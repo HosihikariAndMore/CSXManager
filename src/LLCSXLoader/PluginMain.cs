@@ -6,8 +6,6 @@ namespace PluginMain
     {
         public static void OnPostInit()
         {
-
-            _ = Assembly.Load("Microsoft.CodeAnalysis.CSharp");
             LLCSXLoader.Manager.LoadAllScript();
         }
     }
