@@ -12,8 +12,12 @@ namespace LLCSXLoader
         internal static string[] FindAllScripts()
         {
             if (!Directory.Exists(pluginDir)) { Directory.CreateDirectory(pluginDir); }
-            var files = Directory.GetFiles(pluginDir, "*.csx", SearchOption.TopDirectoryOnly);
-            return files;
+            return Directory.GetFiles(pluginDir, "*.csx", SearchOption.TopDirectoryOnly)
+                .Concat(from dir in Directory.GetDirectories(pluginDir)
+                        let scriptFile = Path.Combine(dir, "main.csx")
+                        where File.Exists(scriptFile)
+                        select scriptFile
+                                ).ToArray();
         }
         internal static void LoadAllScript()
         {

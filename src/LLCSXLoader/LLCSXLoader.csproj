@@ -9,93 +9,82 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Costura.Fody" Version="5.7.0">
-	    <PrivateAssets>all</PrivateAssets>
-	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-	  </PackageReference>
+		<PackageReference Include="Costura.Fody" Version="5.7.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive; compile;</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.4.0"/>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="Dotnet.Script.Core">
-	    <HintPath>lib\Dotnet.Script.Core.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Dotnet.Script.DependencyModel">
-	    <HintPath>lib\Dotnet.Script.DependencyModel.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Dotnet.Script.DependencyModel.NuGet">
-	    <HintPath>lib\Dotnet.Script.DependencyModel.NuGet.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Gapotchenko.FX">
-	    <HintPath>lib\Gapotchenko.FX.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Gapotchenko.FX.Reflection.Loader">
-	    <HintPath>lib\Gapotchenko.FX.Reflection.Loader.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Microsoft.CodeAnalysis">
-	    <HintPath>lib\Microsoft.CodeAnalysis.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Microsoft.CodeAnalysis.CSharp">
-	    <HintPath>lib\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
-	    <HintPath>lib\Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Microsoft.CodeAnalysis.CSharp.Scripting">
-	    <HintPath>lib\Microsoft.CodeAnalysis.CSharp.Scripting.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Microsoft.CodeAnalysis.CSharp.Scripting.resources">
-	    <HintPath>lib\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Microsoft.CodeAnalysis.resources">
-	    <HintPath>lib\Microsoft.CodeAnalysis.resources.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Microsoft.CodeAnalysis.Scripting">
-	    <HintPath>lib\Microsoft.CodeAnalysis.Scripting.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Microsoft.CodeAnalysis.Scripting.resources">
-	    <HintPath>lib\Microsoft.CodeAnalysis.Scripting.resources.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Microsoft.DotNet.PlatformAbstractions">
-	    <HintPath>lib\Microsoft.DotNet.PlatformAbstractions.dll</HintPath>
-	  </Reference>
-	  <Reference Include="Newtonsoft.Json">
-	    <HintPath>lib\Newtonsoft.Json.dll</HintPath>
-	  </Reference>
-	  <Reference Include="NuGet.Common">
-	    <HintPath>lib\NuGet.Common.dll</HintPath>
-	  </Reference>
-	  <Reference Include="NuGet.Configuration">
-	    <HintPath>lib\NuGet.Configuration.dll</HintPath>
-	  </Reference>
-	  <Reference Include="NuGet.DependencyResolver.Core">
-	    <HintPath>lib\NuGet.DependencyResolver.Core.dll</HintPath>
-	  </Reference>
-	  <Reference Include="NuGet.Frameworks">
-	    <HintPath>lib\NuGet.Frameworks.dll</HintPath>
-	  </Reference>
-	  <Reference Include="NuGet.LibraryModel">
-	    <HintPath>lib\NuGet.LibraryModel.dll</HintPath>
-	  </Reference>
-	  <Reference Include="NuGet.Packaging">
-	    <HintPath>lib\NuGet.Packaging.dll</HintPath>
-	  </Reference>
-	  <Reference Include="NuGet.ProjectModel">
-	    <HintPath>lib\NuGet.ProjectModel.dll</HintPath>
-	  </Reference>
-	  <Reference Include="NuGet.Protocol">
-	    <HintPath>lib\NuGet.Protocol.dll</HintPath>
-	  </Reference>
-	  <Reference Include="NuGet.Versioning">
-	    <HintPath>lib\NuGet.Versioning.dll</HintPath>
-	  </Reference>
-	  <Reference Include="ReadLine">
-	    <HintPath>lib\ReadLine.dll</HintPath>
-	  </Reference>
-	  <Reference Include="System.Security.Cryptography.Pkcs">
-	    <HintPath>lib\System.Security.Cryptography.Pkcs.dll</HintPath>
-	  </Reference>
-	  <Reference Include="System.Security.Cryptography.ProtectedData">
-	    <HintPath>lib\System.Security.Cryptography.ProtectedData.dll</HintPath>
-	  </Reference>
+		<Reference Include="Dotnet.Script.Core">
+			<HintPath>lib\Dotnet.Script.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Dotnet.Script.DependencyModel">
+			<HintPath>lib\Dotnet.Script.DependencyModel.dll</HintPath>
+		</Reference>
+		<Reference Include="Dotnet.Script.DependencyModel.NuGet">
+			<HintPath>lib\Dotnet.Script.DependencyModel.NuGet.dll</HintPath>
+		</Reference>
+		<Reference Include="Gapotchenko.FX">
+			<HintPath>lib\Gapotchenko.FX.dll</HintPath>
+		</Reference>
+		<Reference Include="Gapotchenko.FX.Reflection.Loader">
+			<HintPath>lib\Gapotchenko.FX.Reflection.Loader.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.CodeAnalysis">
+			<HintPath>lib\Microsoft.CodeAnalysis.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.CodeAnalysis.CSharp">
+			<HintPath>lib\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.CodeAnalysis.CSharp.Scripting">
+			<HintPath>lib\Microsoft.CodeAnalysis.CSharp.Scripting.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.CodeAnalysis.Scripting">
+			<HintPath>lib\Microsoft.CodeAnalysis.Scripting.dll</HintPath>
+		</Reference>
+		<Reference Include="Microsoft.DotNet.PlatformAbstractions">
+			<HintPath>lib\Microsoft.DotNet.PlatformAbstractions.dll</HintPath>
+		</Reference>
+		<Reference Include="Newtonsoft.Json">
+			<HintPath>lib\Newtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="NuGet.Common">
+			<HintPath>lib\NuGet.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="NuGet.Configuration">
+			<HintPath>lib\NuGet.Configuration.dll</HintPath>
+		</Reference>
+		<Reference Include="NuGet.DependencyResolver.Core">
+			<HintPath>lib\NuGet.DependencyResolver.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="NuGet.Frameworks">
+			<HintPath>lib\NuGet.Frameworks.dll</HintPath>
+		</Reference>
+		<Reference Include="NuGet.LibraryModel">
+			<HintPath>lib\NuGet.LibraryModel.dll</HintPath>
+		</Reference>
+		<Reference Include="NuGet.Packaging">
+			<HintPath>lib\NuGet.Packaging.dll</HintPath>
+		</Reference>
+		<Reference Include="NuGet.ProjectModel">
+			<HintPath>lib\NuGet.ProjectModel.dll</HintPath>
+		</Reference>
+		<Reference Include="NuGet.Protocol">
+			<HintPath>lib\NuGet.Protocol.dll</HintPath>
+		</Reference>
+		<Reference Include="NuGet.Versioning">
+			<HintPath>lib\NuGet.Versioning.dll</HintPath>
+		</Reference>
+		<Reference Include="ReadLine">
+			<HintPath>lib\ReadLine.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Security.Cryptography.Pkcs">
+			<HintPath>lib\System.Security.Cryptography.Pkcs.dll</HintPath>
+		</Reference>
+		<Reference Include="System.Security.Cryptography.ProtectedData">
+			<HintPath>lib\System.Security.Cryptography.ProtectedData.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 </Project>
