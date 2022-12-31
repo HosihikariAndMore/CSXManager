@@ -1,10 +1,10 @@
-﻿using Dotnet.Script.Core;
+using Dotnet.Script.Core;
 using Dotnet.Script.Core.Commands;
 using Dotnet.Script.DependencyModel.Logging;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Scripting.Hosting;
 
-namespace LLCSXLoader
+namespace LiteCSXLoader
 {
     internal static class ScriptLoader
     {

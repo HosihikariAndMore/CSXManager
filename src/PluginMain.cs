@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 
 namespace PluginMain
 {
@@ -6,7 +6,7 @@ namespace PluginMain
     {
         public static void OnPostInit()
         {
-            LLCSXLoader.Manager.LoadAllScript();
+            LiteCSXLoader.Manager.LoadAllScript();
         }
     }
 }

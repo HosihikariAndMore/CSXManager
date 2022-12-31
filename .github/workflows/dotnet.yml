@@ -1,0 +1,30 @@
+name: .NET
+on:
+  push:
+    paths:
+      - "**.cs"
+  pull_request:
+    paths:
+      - "**.cs"
+  workflow_dispatch:
+env:
+  SOURCE_FILE_PATH: src
+  BUILD_CONFIGURATION: Release
+jobs:
+  build:
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.0.x
+      - name: Build
+        working-directory: ${{env.GITHUB_WORKSPACE}}
+        run: dotnet build --configuration ${{env.BUILD_CONFIGURATION}} ${{env.SOURCE_FILE_PATH}}
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3.1.1
+        with:
+          path: ${{github.workspace}}/src/bin/Release
