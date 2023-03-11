@@ -23,8 +23,8 @@ jobs:
           dotnet-version: 7.0.x
       - name: Build
         working-directory: ${{env.GITHUB_WORKSPACE}}
-        run: dotnet build --configuration ${{env.BUILD_CONFIGURATION}} ${{env.SOURCE_FILE_PATH}}
+        run: dotnet publish --configuration ${{env.BUILD_CONFIGURATION}} ${{env.SOURCE_FILE_PATH}}
       - name: Upload artifacts
         uses: actions/upload-artifact@v3.1.1
         with:
-          path: ${{github.workspace}}/src/bin/Release
+          path: ${{github.workspace}}/src/bin/Release/net7.0/publish
